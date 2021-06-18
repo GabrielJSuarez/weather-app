@@ -1,4 +1,4 @@
-const getWeather = async (url) => {
+const getResponse = async (url) => {
     try {
         const response = await fetch(url);
         return await response.json();
@@ -29,7 +29,14 @@ WEATHER_BTN.addEventListener('click', () => {
         UNIT = 'Fahrenheit';
     }
 
-    getWeather(API_URL_CALL).then(data => {
+    const imageURL = `https://api.unsplash.com/photos/random?client_id=NCBaOQJIb0LqtbRq7KmDTq7TLlVSqqzHoOnBVm2OVEo&query=${CITY}`;
+    getResponse(imageURL).then(data => {
+        const BACKGROUND = document.querySelector('#bg-image');
+        BACKGROUND.style.backgroundImage = `url('${data.urls.full}')`;
+        BACKGROUND.style.backgroundSize = 'cover';
+    })
+
+    getResponse(API_URL_CALL).then(data => {
         const CARD = document.querySelector('#weather-info');
         const TEMP_CARD = document.querySelector('#temp-card');
         TEMP_CARD.classList.remove('d-none');
