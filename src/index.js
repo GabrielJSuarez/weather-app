@@ -16,8 +16,29 @@ const WEATHER_BTN = document.querySelector('#weather-btn');
 WEATHER_BTN.addEventListener('click', () => {
     const CITY = document.querySelector('#city-name').value;
     const API_URL_CALL = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=51d8626e1f1408b78641a58cf1dbb707&units=metric`;
-    const DATA = getWeather(API_URL_CALL);
+    getWeather(API_URL_CALL).then(data => {
+        const CARD = document.querySelector('#weather-info');
+        const TEMP_CARD = document.querySelector('#temp-card');
+        TEMP_CARD.classList.remove('d-none');
+        const CITY = document.querySelector('#city');
 
+        CITY.innerHTML = `${data.name}`;
+
+        CARD.innerHTML = `
+            <li class="list-group-item bg-primary text-white border-0 text-center">
+                <span class="fw-bold">Temperature:</span> ${data.main.temp}º (Celcius)
+            </li>
+            <li class="list-group-item bg-primary text-white border-0 text-center">
+                <span class="fw-bold">Weather:</span> ${data.weather[0].description}
+            </li>
+            <li class="list-group-item bg-primary text-white border-0 text-center">
+                <span class="fw-bold">Min Temp:</span> ${data.main.temp_min}º (Celcius)
+            </li>
+            <li class="list-group-item bg-primary text-white border-0 text-center">
+                <span class="fw-bold">Max Temp:</span> ${data.main.temp_max}º (Celcius)
+            </li>
+        `;
+    });
 })
 
 
