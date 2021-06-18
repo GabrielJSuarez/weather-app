@@ -16,18 +16,31 @@
     <body>
 
         <div class="container mt-5">
-            <div class="d-flex align-items-center flex-column pt-5">
-                <form class="row g-3" id="weather-form">
+            <div class="pt-5">
+                <form class="row g-3 d-flex justify-content-around w-50 mx-auto" id="weather-form">
                     <div class="col-auto">
                         <label for="city-name" class="visually-hidden">City</label>
                         <input type="text" class="form-control" id="city-name" placeholder="Enter City Name" required>
                     </div>
+
                     <div class="col-auto">
                         <button type="submit" class="btn btn-primary mb-3" id="weather-btn">Get Weather</button>
                     </div>
                 </form>
 
-                <div id="temp-card" class="card text-white bg-primary mb-3 mt-5 d-none" style="max-width: 20rem;">
+                <div class="d-flex justify-content-center">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="celsius" value="celsius">
+                        <label class="form-check-label" for="celsius">Celsius</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fahrenheit" value="fahrenheit">
+                        <label class="form-check-label" for="fahrenheit">Fahrenheit</label>
+                    </div>
+                </div>
+
+                <div id="temp-card" class="card text-white bg-primary mb-3 mt-5 d-none mx-auto" style="max-width: 25rem;">
                     <div class="p-3">
                         <div id="city" class="card-header border-0 text-center fs-3">Temperature</div>
                         <div class="card-body">
