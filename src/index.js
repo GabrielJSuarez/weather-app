@@ -29,18 +29,20 @@ WEATHER_BTN.addEventListener('click', () => {
         UNIT = 'Fahrenheit';
     }
 
-    const imageURL = `https://api.unsplash.com/photos/random?client_id=NCBaOQJIb0LqtbRq7KmDTq7TLlVSqqzHoOnBVm2OVEo&query=${CITY}`;
-    getResponse(imageURL).then(data => {
-        const BACKGROUND = document.querySelector('#bg-image');
-        BACKGROUND.style.backgroundImage = `url('${data.urls.full}')`;
-        BACKGROUND.style.backgroundSize = 'cover';
-    })
-
     getResponse(API_URL_CALL).then(data => {
         const CARD = document.querySelector('#weather-info');
         const TEMP_CARD = document.querySelector('#temp-card');
         TEMP_CARD.classList.remove('d-none');
         const CITY = document.querySelector('#city');
+
+        const imageURL = `https://api.unsplash.com/photos/random?client_id=NCBaOQJIb0LqtbRq7KmDTq7TLlVSqqzHoOnBVm2OVEo&query=${data.weather[0].description}`;
+
+        getResponse(imageURL).then(data => {
+            const BACKGROUND = document.querySelector('#bg-image');
+            BACKGROUND.style.backgroundImage = `url('${data.urls.full}')`;
+            BACKGROUND.style.backgroundSize = 'cover';
+            BACKGROUND.style.backgroundPosition = 'center';
+        })
 
         CITY.innerHTML = `${data.name}`;
 
