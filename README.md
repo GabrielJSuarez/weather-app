@@ -3,10 +3,8 @@
 > Weather App webpage built with Webpack and the Open Weather API, it takes a location and returns the location's temperature in Celsius or Fahrenheit, this is practice for Microverse for API's and Async/Await syntax.
 
 # Application Screenshot
-![screenshot of Timeline Page](screenshot.png)
-![screenshot of Timeline Page](screenshot_1.png)
-![screenshot of Timeline Page](screenshot_2.png)
-![screenshot of Timeline Page](screenshot_3.png)
+![screenshot of Timeline Page](weather_screenshot_2.png)
+![screenshot of Timeline Page](weather_screenshot_1.png)
 
 ## Built With
 
