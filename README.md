@@ -46,6 +46,14 @@ To get a local copy up and running follow these simple example steps:
 - Node.js
 - npm
 
+## Instructions
+
+- Select the City to get the Temperature
+- Select the unit (Celsius, Fahrenheit)
+- Hit `Get Weather` and the info will de displayed
+- If you want the weather in another unit just select it and hit `Get Weather` once more.
+
+
 ## Authors
 
 👤 **Gabriel Suarez**
