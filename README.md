@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-You can visit [here](https://gabrieljsuarez.github.io/JS-restaurant-page/) our app.
+You can visit [here](https://gabrieljsuarez.github.io/weather-app/) our app.
 
 ## Getting Started
 
