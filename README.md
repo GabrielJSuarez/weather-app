@@ -3,10 +3,8 @@
 > Weather App webpage built with Webpack and the Open Weather API, it takes a location and returns the location's temperature in Celsius or Fahrenheit, this is practice for Microverse for API's and Async/Await syntax.
 
 # Application Screenshot
-![screenshot of Timeline Page](screenshot.png)
-![screenshot of Timeline Page](screenshot_1.png)
-![screenshot of Timeline Page](screenshot_2.png)
-![screenshot of Timeline Page](screenshot_3.png)
+![screenshot of Timeline Page](weather_screenshot_2.png)
+![screenshot of Timeline Page](weather_screenshot_1.png)
 
 ## Built With
 
@@ -18,7 +16,7 @@
 
 ## Live Demo
 
-You can visit [here](https://gabrieljsuarez.github.io/JS-restaurant-page/) our app.
+You can visit [here](https://gabrieljsuarez.github.io/weather-app/) our app.
 
 ## Getting Started
 
@@ -47,6 +45,14 @@ To get a local copy up and running follow these simple example steps:
 - Internet connection
 - Node.js
 - npm
+
+## Instructions
+
+- Select the City to get the Temperature
+- Select the unit (Celsius, Fahrenheit)
+- Hit `Get Weather` and the info will de displayed
+- If you want the weather in another unit just select it and hit `Get Weather` once more.
+
 
 ## Authors
 
